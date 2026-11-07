@@ -42,7 +42,7 @@ class Manby < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/manby --version")
+    assert_match version.to_s, shell_output("#{bin}/manby --version 2>&1")
     (testpath/"in.geojson").write <<~JSON
       {"type":"Feature","properties":{},"geometry":{"type":"LineString","coordinates":[[11.4,48.2],[11.5,48.3]]}}
     JSON
