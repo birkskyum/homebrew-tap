@@ -1,0 +1,28 @@
+# Points the formula at manby's latest release, within the hour of it.
+name: Bump
+
+on:
+  schedule:
+    - cron: '23 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  manby:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag=$(gh release view -R birkskyum/manby --json tagName --jq .tagName)
+          if grep -q "download/$tag/" Formula/manby.rb; then exit 0; fi
+          gh release download "$tag" -R birkskyum/manby -p SHA256SUMS
+          ./bump.sh "${tag#v}"
+          rm SHA256SUMS
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "manby ${tag#v}"
+          git push
