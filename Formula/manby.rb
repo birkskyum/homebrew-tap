@@ -5,23 +5,23 @@ class Manby < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/birkskyum/manby/releases/download/v0.2.8/manby-aarch64-apple-darwin.tar.gz"
-      sha256 "7720bc07685b681c47690e99688c6b3350deb89402b9d3a7b4596a75234a19e7"
+      url "https://github.com/birkskyum/manby/releases/download/v0.2.9/manby-aarch64-apple-darwin.tar.gz"
+      sha256 "a21ae945226e0757673de9315e2007fced276ceae65b2165760692b032c69d30"
     end
     on_intel do
-      url "https://github.com/birkskyum/manby/releases/download/v0.2.8/manby-x86_64-apple-darwin.tar.gz"
-      sha256 "e043b0fe566a3631afd160cb3c7d0424d16c4af54376c4c8b78c45f8e17b06f0"
+      url "https://github.com/birkskyum/manby/releases/download/v0.2.9/manby-x86_64-apple-darwin.tar.gz"
+      sha256 "e8626279a73df2b4afb8790ee182f8f530c6656bfc0d009bfa80ee6c3b35367e"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/birkskyum/manby/releases/download/v0.2.8/manby-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e43ed8b9250e1cc545252d0da74527ae6c17faec4dd122e61701e4c8f29fbcc9"
+      url "https://github.com/birkskyum/manby/releases/download/v0.2.9/manby-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "cd9341a9632e609ec20c2ae46b38e65c3301d911bf9d32ea3f8f768e76c59476"
     end
     on_intel do
-      url "https://github.com/birkskyum/manby/releases/download/v0.2.8/manby-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "7c1ed857ca4963db5269d133f4461354d6bf9f0dcedc77459b298dd8a5fcd731"
+      url "https://github.com/birkskyum/manby/releases/download/v0.2.9/manby-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "4bd26d836480e20bbf090f9a58b4ec9492ef1cc6889d8ad2212cb16442449437"
     end
   end
 
